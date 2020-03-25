@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css"
+    <link rel="stylesheet" href="../public/stylesheets/styles.min.css">
+
+    <style>.features-boxed{color:#313437;background-color:#eef4f7}.features-boxed p{color:#7d8285}.features-boxed h2{font-weight:700;margin-bottom:40px;padding-top:40px;color:inherit}@media (max-width:767px){.features-boxed h2{margin-bottom:25px;padding-top:25px;font-size:24px}}.features-boxed .intro{font-size:16px;max-width:500px;margin:0 auto}.features-boxed .intro p{margin-bottom:0}.features-boxed .features{padding:50px 0}.features-boxed .item{text-align:center}.features-boxed .item .box{text-align:center;padding:30px;background-color:#fff;margin-bottom:30px}.features-boxed .item .icon{font-size:60px;color:#1485ee;margin-top:20px;margin-bottom:35px}.features-boxed .item .name{font-weight:700;font-size:18px;margin-bottom:8px;margin-top:0;color:inherit}.features-boxed .item .description{font-size:15px;margin-top:15px;margin-bottom:20px}.footer-basic{padding:40px 0;background-color:#fff;color:#4b4c4d}.footer-basic ul{padding:0;list-style:none;text-align:center;font-size:18px;line-height:1.6;margin-bottom:0}.footer-basic li{padding:0 10px}.footer-basic ul a{color:inherit;text-decoration:none;opacity:.8}.footer-basic ul a:hover{opacity:1}.footer-basic .social{text-align:center;padding-bottom:25px}.footer-basic .social>a{font-size:24px;width:40px;height:40px;line-height:40px;display:inline-block;text-align:center;border-radius:50%;border:1px solid #ccc;margin:0 8px;color:inherit;opacity:.75}.footer-basic .social>a:hover{opacity:.9}.footer-basic .copyright{margin-top:15px;text-align:center;font-size:13px;color:#aaa;margin-bottom:0}</style>
+</head>
+
+<body>
+    <!-- Start: Features Boxed -->
+    <div class="features-boxed">
+        <div class="container">
+            <!-- Start: Intro -->
+            <div class="intro">
+                <h2 class="text-center pulse animated">CORONA CRISIS IN SRI LANKA</h2>
+                <p class="text-center" data-aos="zoom-out">Do Not Panic . Keep Your Distance. Stay at Home</p>
+            </div>
+            <!-- End: Intro -->
+            <!-- Start: Features -->
+            <div class="row justify-content-center features">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="material-icons icon" data-bs-hover-animate="jello">hotel</i>
+                        <h3 class="name">Total Cases</h3>
+                        <%  { %>
+                        <h1 ><%= lclCases %></h1>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-stethoscope icon" data-bs-hover-animate="bounce"></i>
+                        <h3 class="name">Total Recovered</h3>
+                        <%  { %>
+                          <h1><%= lclRecovered %></h1>
+                        <% } %>
+                      </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="material-icons icon" data-bs-hover-animate="bounce">sentiment_dissatisfied</i>
+                        <h3 class="name">Total Deaths</h3>
+                        <%  { %>
+                          <h1 style="color: red;"><%= lclDeaths %></h1>
+                          <% } %>
+                      </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-globe icon" data-bs-hover-animate="bounce"></i>
+                        <h3 class="name">Global Total Cases</h3>
+                        <%  { %>
+                          <h1><%= gblCases %></h1>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-stethoscope icon" data-bs-hover-animate="bounce"></i>
+                        <h3 class="name">Global Total Recovered</h3>
+                        <%  { %>
+                          <h1><%= gblRecovered %></h1>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fa fa-user-times icon" data-bs-hover-animate="bounce"></i>
+                        <h3 class="name">Global Total Deaths</h3>
+                        <%  { %>
+                          <h1 style="color: red;"><%= gblDeaths  %></h1>
+                        <% } %>  
+                    </div>
+                </div>
+            </div>
+            <!-- End: Features -->
+        </div>
+    </div>
+    <!-- End: Features Boxed -->
+    <!-- Start: Footer Basic -->
+    <div class="footer-basic">
+        <footer>
+            <!-- Start: Social Icons -->
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <!-- End: Social Icons -->
+            <!-- Start: Links -->
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <!-- End: Links -->
+            <!-- Start: Copyright -->
+            <p class="copyright">4NoteFourSolutions © 2020 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Powered By @ &nbsp; hpb.health.gov.lk</p>
+            <!-- End: Copyright -->
+        </footer>
+    </div>
+    <!-- End: Footer Basic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    
+  <script>$(document).ready(function(){AOS.init({disable:"mobile"}),$("[data-bs-hover-animate]").mouseenter(function(){var a=$(this);a.addClass("animated "+a.attr("data-bs-hover-animate"))}).mouseleave(function(){var a=$(this);a.removeClass("animated "+a.attr("data-bs-hover-animate"))})});</script>
+</body>
+
+</html>
